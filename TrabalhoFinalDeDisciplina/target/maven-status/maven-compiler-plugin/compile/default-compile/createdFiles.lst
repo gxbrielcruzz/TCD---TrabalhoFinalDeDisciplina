@@ -1,0 +1,7 @@
+com\mycompany\trabalhofinaldedisciplina\gui\TelaCadastro.class
+com\mycompany\trabalhofinaldedisciplina\ClienteDAO.class
+com\mycompany\trabalhofinaldedisciplina\TrabalhoFinalDeDisciplina.class
+com\mycompany\trabalhofinaldedisciplina\entidades\Cliente.class
+com\mycompany\trabalhofinaldedisciplina\gui\TelaListagem.class
+com\mycompany\trabalhofinaldedisciplina\gui\TelaAtualizacao.class
+com\mycompany\trabalhofinaldedisciplina\gui\TelaExclusao.class

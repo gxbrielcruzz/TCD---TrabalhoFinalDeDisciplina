@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Esse é o arquivo que configura o Hibernate, pra ele saber como se conectar no banco de dados -->
+
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+  
+        <!-- Driver que o Hibernate vai usar pra conectar com o MySQL -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+    
+        <!-- URL de conexão com o banco (nome do banco é 'cadastro_clientes') -->
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/cadastro_clientes?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=UTC</property>
+    
+        <!-- Usuário e senha do banco (no caso aqui, o root e a senha que você definiu) -->
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">AL04Sql</property>
+
+        <!-- Dialeto é tipo um tradutor pro banco. Aqui tá dizendo que é MySQL 8 -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <!-- Se quiser ver os comandos SQL que o Hibernate executa, coloca true aqui -->
+        <property name="hibernate.show_sql">false</property>
+
+        <!-- Formata os SQLs que ele mostra no console (se o show_sql tiver true) -->
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Essa config aqui faz o Hibernate criar ou atualizar as tabelas automaticamente no banco -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Aqui você mapeia qual classe Java o Hibernate vai usar pra criar a tabela -->
+        <mapping class="com.mycompany.trabalhofinaldedisciplina.entidades.Cliente"/>
+
+    </session-factory>
+</hibernate-configuration>

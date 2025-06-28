@@ -1,8 +1,5 @@
 -- Adicione esse script no seu SQL para alterar a senha de acordo com a conexão do banco
-
-ALTER USER 'root'@'localhost' IDENTIFIED BY 'AL04Sql';
+-- Cria o usuário e concede privilégios ao banco correto
+CREATE USER 'alef'@'localhost' IDENTIFIED BY 'AL04Sql';
+GRANT ALL PRIVILEGES ON cadastro_clientes.* TO 'alef'@'localhost';
 FLUSH PRIVILEGES;
-
--- Adicionar "UNIQUE" em email para evitar duplicidade de email
-
-ALTER TABLE cliente ADD UNIQUE (email);
